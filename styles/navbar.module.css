@@ -1,0 +1,29 @@
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background: #cff0cc;
+    overflow: hidden;
+    justify-content: space-around;
+    display:flex;
+}
+
+.navbar a {
+    float:left;
+    font-weight: bold;
+    display: flex;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+    color: darkgreen;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+      background-color: #ddd;
+      color: black;
+}
+
+.navbar a.active {
+}
+

@@ -1,0 +1,12 @@
+.page {
+    padding: 40px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.intro {
+    padding: 20px;
+    border: 3px;
+    border-style: outset;
+    border-color: green;
+}

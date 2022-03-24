@@ -1,0 +1,21 @@
+.title {
+    font-size: 30px;
+}
+
+.body {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding: 50px;
+}
+
+.post {
+    padding: 50px;
+    border: 1px;
+    border-style: outset;
+}
+
+.quote {
+    font-weight: bold;
+    font-style: italic; 
+    text-align: center;
+}
