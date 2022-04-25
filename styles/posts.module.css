@@ -1,0 +1,24 @@
+.article {
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #383a59;
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 30px;
+    color: #f8f8f2;  
+}
+
+.title {
+    color: #f8f8f2;  
+    background-color: inherit;
+    font-size: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.children {
+    color: #ccccca;
+    background-color: inherit;
+}

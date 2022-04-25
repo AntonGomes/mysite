@@ -1,0 +1,344 @@
+(() => {
+var exports = {};
+exports.id = 195;
+exports.ids = [195];
+exports.modules = {
+
+/***/ 6556:
+/***/ ((module) => {
+
+// Exports
+module.exports = {
+	"body": "blog_body__qBvIu",
+	"title": "blog_title__la49Y",
+	"link": "blog_link__n7pbB",
+	"hide": "blog_hide___Kh5J",
+	"search": "blog_search__fENSf"
+};
+
+
+/***/ }),
+
+/***/ 5705:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Blog),
+/* harmony export */   "getStaticProps": () => (/* binding */ getStaticProps)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_default__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1481);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1664);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _styles_blog_module_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(6556);
+/* harmony import */ var _styles_blog_module_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_styles_blog_module_css__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _utils_index__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6608);
+/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6290);
+/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_icons_fa__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
+
+
+
+function Blog(props) {
+    const posts = props.posts;
+    const { 0: input , 1: setInput  } = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)("");
+    const { 0: hide , 1: setHide  } = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)(true);
+    let filteredPosts = posts.filter((post)=>post.title.includes(input)
+    );
+    let h = hide ? "none" : "block";
+    return(/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_default__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z, {
+        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+            className: (_styles_blog_module_css__WEBPACK_IMPORTED_MODULE_6___default().body),
+            children: [
+                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                    className: (_styles_blog_module_css__WEBPACK_IMPORTED_MODULE_6___default().search),
+                    children: [
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("button", {
+                            className: (_styles_blog_module_css__WEBPACK_IMPORTED_MODULE_6___default().button),
+                            onClick: ()=>{
+                                setHide(!hide);
+                            },
+                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_5__.FaSearch, {})
+                        }),
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("input", {
+                            type: "search",
+                            className: (_styles_blog_module_css__WEBPACK_IMPORTED_MODULE_6___default().input),
+                            style: {
+                                display: h
+                            },
+                            onChange: (e)=>setInput(e.target.value)
+                        })
+                    ]
+                }),
+                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                    className: (_styles_blog_module_css__WEBPACK_IMPORTED_MODULE_6___default().title),
+                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("ul", {
+                        children: filteredPosts.map((post)=>{
+                            return(/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
+                                children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                    className: (_styles_blog_module_css__WEBPACK_IMPORTED_MODULE_6___default().link),
+                                    children: [
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(next_link__WEBPACK_IMPORTED_MODULE_2__["default"], {
+                                            href: post.slug.replace(".md", ""),
+                                            children: post.title
+                                        }),
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                            children: post.description
+                                        })
+                                    ]
+                                })
+                            }));
+                        })
+                    })
+                })
+            ]
+        })
+    }));
+};
+async function getStaticProps({ params  }) {
+    const posts = await (0,_utils_index__WEBPACK_IMPORTED_MODULE_4__/* .getAllPosts */ .Bd)();
+    return {
+        props: {
+            posts: posts
+        }
+    };
+}
+
+
+/***/ }),
+
+/***/ 6608:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "Bd": () => (/* binding */ getAllPosts),
+  "zQ": () => (/* binding */ getPostBySlug),
+  "p$": () => (/* binding */ getPostSlugs)
+});
+
+;// CONCATENATED MODULE: external "gray-matter"
+const external_gray_matter_namespaceObject = require("gray-matter");
+var external_gray_matter_default = /*#__PURE__*/__webpack_require__.n(external_gray_matter_namespaceObject);
+// EXTERNAL MODULE: external "fs"
+var external_fs_ = __webpack_require__(7147);
+var external_fs_default = /*#__PURE__*/__webpack_require__.n(external_fs_);
+// EXTERNAL MODULE: external "path"
+var external_path_ = __webpack_require__(1423);
+// EXTERNAL MODULE: ./node_modules/next/link.js
+var next_link = __webpack_require__(1664);
+;// CONCATENATED MODULE: ./utils/index.js
+
+
+
+
+function getPostSlugs() {
+    return external_fs_default().readdirSync("./blog");
+}
+function getPostBySlug(slug) {
+    const p = slug;
+    const path = (0,external_path_.join)(process.cwd(), "/blog/" + p);
+    const fileContent = external_fs_default().readFileSync(path, 'utf8');
+    const meta = external_gray_matter_default()(fileContent);
+    const post = meta.data;
+    const content = meta.content;
+    return {
+        title: post.title,
+        description: post.description,
+        content: content,
+        slug: "/blog/" + p
+    };
+}
+async function getAllPosts() {
+    const slugs = getPostSlugs();
+    const posts = slugs.map((post)=>{
+        const p = getPostBySlug(post);
+        return p;
+    });
+    return posts;
+}
+
+
+/***/ }),
+
+/***/ 562:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/server/denormalize-page-path.js");
+
+/***/ }),
+
+/***/ 4014:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/i18n/normalize-locale-path.js");
+
+/***/ }),
+
+/***/ 8524:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/is-plain-object.js");
+
+/***/ }),
+
+/***/ 8020:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/mitt.js");
+
+/***/ }),
+
+/***/ 4964:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router-context.js");
+
+/***/ }),
+
+/***/ 9565:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/get-asset-path-from-route.js");
+
+/***/ }),
+
+/***/ 4365:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/get-middleware-regex.js");
+
+/***/ }),
+
+/***/ 1428:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/is-dynamic.js");
+
+/***/ }),
+
+/***/ 1292:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/parse-relative-url.js");
+
+/***/ }),
+
+/***/ 979:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/querystring.js");
+
+/***/ }),
+
+/***/ 6052:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/resolve-rewrites.js");
+
+/***/ }),
+
+/***/ 4226:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/route-matcher.js");
+
+/***/ }),
+
+/***/ 5052:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/route-regex.js");
+
+/***/ }),
+
+/***/ 9232:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/utils.js");
+
+/***/ }),
+
+/***/ 1853:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/router");
+
+/***/ }),
+
+/***/ 1423:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("path");
+
+/***/ }),
+
+/***/ 6689:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react");
+
+/***/ }),
+
+/***/ 6290:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react-icons/fa");
+
+/***/ }),
+
+/***/ 997:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react/jsx-runtime");
+
+/***/ }),
+
+/***/ 7147:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("fs");
+
+/***/ })
+
+};
+;
+
+// load runtime
+var __webpack_require__ = require("../webpack-runtime.js");
+__webpack_require__.C(exports);
+var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+var __webpack_exports__ = __webpack_require__.X(0, [730,664,481], () => (__webpack_exec__(5705)));
+module.exports = __webpack_exports__;
+
+})();

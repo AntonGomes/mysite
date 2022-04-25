@@ -1,12 +1,15 @@
-import Navbar from "../components/navbar"
-import Header from "../components/header"
+import Navbar from "../components/navbar" 
+import Footer from "../components/footer" 
+import styles from "../styles/default.module.css"
 
 export default function Default(props) {
-    return (
+    return ( 
         <div>
-            <Header />
             <Navbar />
-            {props.children}
+            <div className={styles.body}>
+                {props.children}
+            </div>
+            <Footer />
         </div>
     )
 }
