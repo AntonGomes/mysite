@@ -8,7 +8,7 @@ export default function Footer(props) {
             <li><a href = "https://github.com/AntonGomes"><FaGithub/></a></li>
             <li><a href = "https://twitter.com/AomlGomes"><FaTwitter/></a></li>  
             <li><a href = "mailto:aoml@gmail.com"><FaInbox/></a></li>  
-            <li><a href = ><FaLinkedin/></a></li>
+            <li><a href = "https://linkedin.com"><FaLinkedin/></a></li>
         </ul>
         </div>
     )
