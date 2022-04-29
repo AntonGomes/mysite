@@ -59,11 +59,11 @@ export default function bordle(props) {
 
     return(
         <Default>
-        <div id={styles["bord"]}>
-        <div id={styles["bordHead"]}>
-        <a href={String(list[getRandomInt(list.length)])} target="_blank">bored?</a>
-        </div>
-        </div>
+            <div id={styles["bord"]}>
+                <div id={styles["bordHead"]}>
+                    <a href={String(list[getRandomInt(list.length)])} target="_blank">bored?</a>
+                </div>
+            </div>
         </Default>
     )
 }

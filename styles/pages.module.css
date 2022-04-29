@@ -18,9 +18,8 @@
     font-size: 50px;
 }
 
-.title {
+.featured {
     margin-top: 40px;
-    float: right;
 }
 
 .head2 {
@@ -30,16 +29,16 @@
     padding-bottom: 20px;
 }
 
-.title ul {
+.featured ul {
     list-style-type: none;
     display: block;
 }
 
-.title li {
+.featured li {
     border: 5px;
 }
 
-.title .link {
+.featured .link {
     border-width: 1px;
     border-style: solid;
     border-radius: 10px;
@@ -52,13 +51,13 @@
     display: inline-block;
 }
 
-.title .link:hover  {
+.featured .link:hover  {
     background: #6272a4;
     display: inline-block;
 }
 
 
-.title .link a {
+.featured .link a {
     padding: 15px;
     cursor: pointer;
     text-decoration: none;

@@ -1,7 +1,6 @@
 import Link from "next/link"
 import { useRouter } from "next/router";
 import styles from "../styles/navbar.module.css"
-import { FaGithub, FaTwitter, FaLinkedin, FaInbox } from "react-icons/fa"
 
 
 export default function Navbar(props) {
@@ -11,13 +10,15 @@ export default function Navbar(props) {
         
             <ul className={styles.nav}>
                 <li className={router.pathname == "/" ? styles.active : ""}><Link href="/">Anton Gomes</Link></li>
-                <li className={router.pathname == "/blog" ? styles.active : ""}><Link href="/blog">Blog</Link></li>
+                <li className={router.pathname == "/blog" ? styles.active : ""}><Link href="/blog">Posts</Link></li>
                 <li className={router.pathname == "/bordle" ? styles.active : ""}><Link href="/bordle">Bordle</Link></li>
-                <li className={router.pathname == "/thought" ? styles.active : ""}><Link href="/thought">A Shower Thought</Link></li>
+                <li className={router.pathname == "https://kk.org/thetechnium/103-bits-of-advice-i-wish-i-had-known/" ? styles.active : ""}><a href="https://kk.org/thetechnium/103-bits-of-advice-i-wish-i-had-known/">Something Cool?</a></li>
             </ul> 
 
             <div className={styles.contact}> 
-        Contact
+                <div className={router.pathname == "/thought" ? styles.active : ""}>
+        <Link href="/contact">Contact</Link>
+                </div>
             </div>
 
         </div>

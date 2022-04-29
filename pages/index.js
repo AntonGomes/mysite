@@ -29,7 +29,7 @@ export default function Home(props) {
                 <br/>
                 Keep in touch! My contacts are available in the top right of the page.
             </p>
-            <div className={styles.title}>
+            <div className={styles.featured}>
             <h2 className={styles.head2}>Featured Thoughts</h2>
                 <ul>
             {
