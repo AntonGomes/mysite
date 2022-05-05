@@ -17,6 +17,8 @@ export function getPostBySlug(slug) {
     return {
         title: post.title,
         description: post.description,
+        date: post.date,
+        readTime: post.readTime,
         content: content,
         slug: "/blog/" + p,
    }

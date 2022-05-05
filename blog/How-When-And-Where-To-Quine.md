@@ -1,7 +1,8 @@
 ---
 title: How, When and Where to quine - A Complete Guide 
 description: a description od quines 
-slug: How-When-And-Where-To-Quine
+date: --/--/--
+readTime: 20.88
 ---
 "Yields falsehood when preceded by its quotation."
 Yields falsehood when preceded by its quotation.

@@ -13,6 +13,7 @@ export default function Navbar(props) {
                 <li className={router.pathname == "/blog" ? styles.active : ""}><Link href="/blog">Posts</Link></li>
                 <li className={router.pathname == "/bordle" ? styles.active : ""}><Link href="/bordle">Bordle</Link></li>
                 <li className={router.pathname == "https://kk.org/thetechnium/103-bits-of-advice-i-wish-i-had-known/" ? styles.active : ""}><a href="https://kk.org/thetechnium/103-bits-of-advice-i-wish-i-had-known/">Something Cool?</a></li>
+                <li className={router.pathname == "https://www.autodidacts.io/what-game-are-you-playing/" ? styles.active : ""}><a href="https://www.autodidacts.io/what-game-are-you-playing/">Something Cool 2?</a></li>
             </ul> 
 
             <div className={styles.contact}> 

@@ -42,6 +42,8 @@ export default function Blog(props) {
                         <li>
                             <div className={styles.link}>
                                 <Link href={post.slug.replace(".md", "")}>{post.title}</Link>
+                                <p>{post.date}</p>
+                                <p>This post will take {post.readTime} seconds to read</p>
                                 <p>{post.description}</p>
                             </div>
                         </li>
